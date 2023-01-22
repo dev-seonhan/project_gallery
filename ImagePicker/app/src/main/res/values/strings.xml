@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ImagePicker</string>
+    <string name="main_fragment_label">ALBUM LIST</string>
+    <string name="detail_fragment_label">ALBUM NAME</string>
+    <string name="overlay_fragment_label">SELECTED IMAGE</string>
+
+    <string name="main_main_title_text">ALBUM LIST</string>
+    <string name="main_sub_title_text">My Albums</string>
+</resources>

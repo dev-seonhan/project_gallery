@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_top_guideline" type="dimen" format="float">0.0</item>
+    <item name="main_bottom_guideline" type="dimen" format="float">1.0</item>
+    <item name="main_start_guideline" type="dimen" format="float">0.02</item>
+    <item name="main_end_guideline" type="dimen" format="float">0.98</item>
+
+    <!-- Main Fragment -->
+    <dimen name="mainFragment_title_height">115dp</dimen>
+    <dimen name="mainFragment_title_elevation">5dp</dimen>
+
+    <dimen name="main_title_margin_top">39dp</dimen>
+    <dimen name="main_title_margin_left">28dp</dimen>
+    <dimen name="main_title_text_size">18sp</dimen>
+
+    <dimen name="sub_title_margin_top">27dp</dimen>
+    <dimen name="sub_title_margin_left">31dp</dimen>
+    <dimen name="sub_title_text_size">13sp</dimen>
+
+    <dimen name="mainFragment_content_margin">4dp</dimen>
+    <dimen name="mainFragment_content_elevation">3dp</dimen>
+    <dimen name="mainFragment_content_image_height">170dp</dimen>
+    <dimen name="mainFragment_content_title_height">49dp</dimen>
+
+    <dimen name="content_title_margin_top">9dp</dimen>
+    <dimen name="content_title_margin_left">8dp</dimen>
+    <dimen name="content_title_text_size">13sp</dimen>
+
+    <dimen name="content_count_margin_bottom">9dp</dimen>
+    <dimen name="content_count_margin_left">8dp</dimen>
+    <dimen name="content_count_text_size">11sp</dimen>
+
+    <!-- Detail Fragment -->
+    <dimen name="detailFragment_title_height">77dp</dimen>
+    <dimen name="detailFragment_title_elevation">5dp</dimen>
+
+    <dimen name="detail_button_back_width">26dp</dimen>
+    <dimen name="detail_button_back_height">26dp</dimen>
+    <dimen name="detail_button_back_margin_top">37dp</dimen>
+    <dimen name="detail_button_back_margin_left">9dp</dimen>
+    <dimen name="detail_button_back_margin_right">9dp</dimen>
+
+    <dimen name="detail_image_line_margin_top">37dp</dimen>
+
+    <dimen name="detail_title_margin_top">37dp</dimen>
+    <dimen name="detail_title_margin_left">9dp</dimen>
+    <dimen name="detail_title_text_size">18sp</dimen>
+
+    <!-- Overlay Fragment -->
+    <dimen name="overlayFragment_title_height">77dp</dimen>
+    <dimen name="overlayFragment_title_elevation">5dp</dimen>
+
+    <dimen name="overlay_button_back_width">26dp</dimen>
+    <dimen name="overlay_button_back_height">26dp</dimen>
+    <dimen name="overlay_button_back_margin_top">37dp</dimen>
+    <dimen name="overlay_button_back_margin_left">9dp</dimen>
+    <dimen name="overlay_button_back_margin_right">9dp</dimen>
+
+    <dimen name="overlay_image_line_margin_top">37dp</dimen>
+
+    <dimen name="overlay_title_margin_top">37dp</dimen>
+    <dimen name="overlay_title_margin_left">9dp</dimen>
+    <dimen name="overlay_title_text_size">18sp</dimen>
+
+</resources>

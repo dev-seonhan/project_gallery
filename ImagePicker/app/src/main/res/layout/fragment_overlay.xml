@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.seonhan_dev.imagepicker.ui.main.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">'
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailFragment_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/overlayFragment_title_height"
+            android:elevation="@dimen/overlayFragment_title_elevation"
+            android:background="@color/background"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/headlineBackImage"
+                android:layout_width="@dimen/overlay_button_back_width"
+                android:layout_height="@dimen/overlay_button_back_height"
+                android:layout_marginTop="@dimen/overlay_button_back_margin_top"
+                android:layout_marginStart="@dimen/overlay_button_back_margin_left"
+                android:layout_marginEnd="@dimen/overlay_button_back_margin_right"
+                android:background="@drawable/btn_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/headlineImage"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/headlineImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/overlay_image_line_margin_top"
+                android:background="@drawable/ic_headline_line"
+                app:layout_constraintEnd_toStartOf="@id/overlayTitle"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/overlayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/overlay_title_margin_top"
+                android:layout_marginStart="@dimen/overlay_title_margin_left"
+                android:autoSizeTextType="uniform"
+                android:gravity="left"
+                android:lines="1"
+                android:text="@{viewmodel.selectedFolder.item}"
+                android:textSize="@dimen/overlay_title_text_size"
+                android:textColor="@color/colorTextDark"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/headlineImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/select_image"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:contentDescription="@null"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:setImageRes="@{viewmodel.selectedImage.contentUri.toString()}"/>
+
+        <include
+            android:id="@+id/svg_content"
+            layout="@layout/folder_content_scrolling"/>
+
+    </LinearLayout>
+
+</layout>
