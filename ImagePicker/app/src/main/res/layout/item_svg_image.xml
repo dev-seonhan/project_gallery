@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <com.caverock.androidsvg.SVGImageView
-        android:id="@+id/svg_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="1dp"
-        android:contentDescription="@null"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop" />
-
+    <ImageView
+        android:id="@+id/image_thumbnail"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/photo_selector"/>
 </layout>

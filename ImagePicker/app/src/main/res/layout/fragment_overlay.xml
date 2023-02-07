@@ -63,18 +63,39 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/select_image"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:contentDescription="@null"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
-            app:setImageRes="@{viewmodel.selectedImage.contentUri.toString()}"/>
+            android:layout_height="match_parent">
 
-        <include
-            android:id="@+id/svg_content"
-            layout="@layout/folder_content_scrolling"/>
+            <ImageView
+                android:id="@+id/select_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                app:setImageRes="@{viewmodel.selectedImage.contentUri.toString()}"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gallery_cover_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/image_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:scrollbars="none"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

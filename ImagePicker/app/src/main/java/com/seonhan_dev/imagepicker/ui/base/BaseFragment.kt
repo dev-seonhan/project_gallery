@@ -15,6 +15,8 @@ abstract class BaseFragment<Binding : ViewDataBinding>(private val layout: Int) 
     protected lateinit var binding: Binding
     private val mainViewModel: MainViewModel by activityViewModels()
 
+    protected var offset: Int = 0
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
