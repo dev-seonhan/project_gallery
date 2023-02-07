@@ -1,6 +1,5 @@
 package com.seonhan_dev.imagepicker.ui.overlay
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -8,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.seonhan_dev.imagepicker.data.model.MediaStoreGallery
 import com.seonhan_dev.imagepicker.databinding.ItemSvgImageBinding
-import kotlinx.coroutines.selects.select
 
 class GalleryAdapter(private val onClick: (MediaStoreGallery, Int) -> Unit) :
     ListAdapter<MediaStoreGallery, GalleryAdapter.ViewHolder>(MediaStoreGallery.DiffCallback) {
@@ -62,4 +60,5 @@ class GalleryAdapter(private val onClick: (MediaStoreGallery, Int) -> Unit) :
 
         submitList(updatedImageList)
     }
+
 }

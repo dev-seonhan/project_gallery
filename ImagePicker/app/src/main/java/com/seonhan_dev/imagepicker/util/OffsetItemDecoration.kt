@@ -1,4 +1,4 @@
-package com.seonhan_dev.imagepicker.ui.overlay
+package com.seonhan_dev.imagepicker.util
 
 import android.graphics.Rect
 import android.view.View

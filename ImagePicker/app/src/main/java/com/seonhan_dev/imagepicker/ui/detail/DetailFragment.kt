@@ -25,7 +25,6 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(R.layout.fragment_det
     }
 
     private val mainViewModel: MainViewModel by activityViewModels()
-    private val detailViewModel: DetailViewModel by viewModels()
 
     lateinit var folderItem: MediaStoreFolder
 
@@ -57,17 +56,14 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(R.layout.fragment_det
     }
 
     private fun initView() {
-
         val gridLayoutManager = GridLayoutManager(requireContext(), 3)
 
         with(binding) {
             viewmodel = mainViewModel
-
             albumContent.recyclerView.apply {
                 layoutManager = gridLayoutManager
                 adapter = detailAdapter
             }
-
             headlineBackImage.setOnClickListener {
                 findNavController().navigateUp()
             }

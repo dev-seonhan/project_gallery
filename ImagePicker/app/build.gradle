@@ -78,9 +78,4 @@ dependencies {
 
     implementation "androidx.window:window:1.0.0"
 
-    // SVG Library
-    implementation 'com.github.japgolly.android:svg-android:2.0.6'
-    implementation 'com.caverock:androidsvg-aar:1.4'
-    implementation 'io.coil-kt:coil-svg:2.2.2'
-
 }

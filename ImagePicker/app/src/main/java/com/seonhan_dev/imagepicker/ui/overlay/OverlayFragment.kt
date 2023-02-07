@@ -2,13 +2,10 @@ package com.seonhan_dev.imagepicker.ui.overlay
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -20,6 +17,7 @@ import com.seonhan_dev.imagepicker.data.model.MediaStoreGallery
 import com.seonhan_dev.imagepicker.databinding.FragmentOverlayBinding
 import com.seonhan_dev.imagepicker.ui.base.BaseFragment
 import com.seonhan_dev.imagepicker.ui.main.MainViewModel
+import com.seonhan_dev.imagepicker.util.OffsetItemDecoration
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -31,7 +29,6 @@ class OverlayFragment : BaseFragment<FragmentOverlayBinding>(R.layout.fragment_o
     }
 
     private val mainViewModel: MainViewModel by activityViewModels()
-    private val overlayViewModel: OverlayViewModel by viewModels()
 
     private lateinit var galleryItem: MediaStoreGallery
     private lateinit var galleryItemList: List<MediaStoreGallery>
@@ -86,12 +83,12 @@ class OverlayFragment : BaseFragment<FragmentOverlayBinding>(R.layout.fragment_o
                 adapter = galleryAdapter
                 layoutManager = linearLayoutManager
 
-                val galleryItemList = galleryAdapter.currentList
+                galleryItemList = galleryAdapter.currentList
                 galleryItemList.let {
                     it.forEachIndexed { index, _ ->
                         if (it[index].id == galleryItem.id) {
                             galleryAdapter.selectedPosition = index
-                            linearLayoutManager.scrollToPositionWithOffset(galleryAdapter.selectedPosition, offset)
+                            linearLayoutManager.scrollToPositionWithOffset(index, offset)
                         }
                     }
                 }
@@ -118,7 +115,7 @@ class OverlayFragment : BaseFragment<FragmentOverlayBinding>(R.layout.fragment_o
 
     private fun updateLayout(item: MediaStoreGallery, position: Int) {
         linearLayoutManager.scrollToPositionWithOffset(position, offset)
-        binding.galleryCoverLayout.visibility = View.INVISIBLE
+        binding.galleryCoverLayout.visibility = View.VISIBLE
 
         mainViewModel.setSelectedImage(item)
         galleryItem = mainViewModel.selectedImage.value!!
