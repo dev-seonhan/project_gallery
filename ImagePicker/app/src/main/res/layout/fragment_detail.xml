@@ -30,7 +30,7 @@
                 android:layout_marginTop="@dimen/detail_button_back_margin_top"
                 android:layout_marginStart="@dimen/detail_button_back_margin_left"
                 android:layout_marginEnd="@dimen/detail_button_back_margin_right"
-                android:background="@drawable/btn_back"
+                android:background="@drawable/btn_arrow_left"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/headlineImage"
                 app:layout_constraintTop_toTopOf="parent"/>

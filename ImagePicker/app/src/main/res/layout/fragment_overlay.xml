@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background">'
+        android:background="@color/background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/detailFragment_title"
@@ -30,7 +30,7 @@
                 android:layout_marginTop="@dimen/overlay_button_back_margin_top"
                 android:layout_marginStart="@dimen/overlay_button_back_margin_left"
                 android:layout_marginEnd="@dimen/overlay_button_back_margin_right"
-                android:background="@drawable/btn_back"
+                android:background="@drawable/btn_arrow_left"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/headlineImage"
                 app:layout_constraintTop_toTopOf="parent"/>

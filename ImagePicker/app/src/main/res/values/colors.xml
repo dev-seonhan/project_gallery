@@ -15,10 +15,13 @@
     <color name="colorPrimaryDark">#570076</color>
     <color name="colorAccent">#7ba616</color>
 
-    <color name="background">#FFFFFF</color>
-    <color name="bgColorPointDark">#C0C0C0</color>
+    <!-- color | #393E46 | #6D9886 | #F2E7D5 | #F7F7F7 -->
+    <color name="background">#F7F7F7</color>
+    <color name="bgColorPointDark">#F2E7D5</color>
     <color name="bgColorPoint">#E4E4E4</color>
+    <color name="bgColorDeep">#6D9886</color>
 
-    <color name="colorTextDark">#FF151515</color>
-    <color name="colorTextWhite">#FFFFFFFF</color>
+    <color name="colorTextDark">#393E46</color>
+    <color name="colorTextWhite">#F7F7F7</color>
+
 </resources>
